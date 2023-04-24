@@ -6,7 +6,7 @@ function App() {
   const [catFact, setCatFact] = useState([]);
   const [showFact, setShowFact] = useState(true);
 
-  const getCatFacts = () => {
+  const getCatFact = () => {
     axios.get("https://catfact.ninja/fact").then((response) => {
       console.log(response);
       setCatFact(response.data.fact);
@@ -14,7 +14,7 @@ function App() {
   };
 
   useEffect(() => {
-    getCatFacts();
+    getCatFact();
   }, []);
 
   const toggle = () => {
@@ -41,12 +41,30 @@ function App() {
           </div>
         </section>
         <section className="facts">
-          <div className="fileCabinet">
-            <div className="drawer">
-              <button onClick={toggle}></button>
+          <div className="book">
+            <div className="back"></div>
+            <div className="page6">
+              <div>
+                <button className="getFact" onClick={toggle}>
+                  Want to Learn More?
+                </button>
+              </div>
+              <div className="fact">{showFact ? null : <p>{catFact}</p>}</div>
+              <div>
+                <button className="newFact" onClick={getCatFact}>
+                  How About Something Different?
+                </button>
+              </div>
             </div>
-            <div className="openDrawer">
-              {showFact ? null : <p>{catFact}</p>}
+            <div className="page5"></div>
+            <div className="page4"></div>
+            <div className="page3"></div>
+            <div className="page2"></div>
+            <div className="page1"></div>
+            <div className="front">
+              <div className="bookTitle">
+                The Truth About Cats, or So You Thought
+              </div>
             </div>
           </div>
         </section>
