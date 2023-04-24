@@ -36,6 +36,7 @@ function App() {
                 <div className="pupil"></div>
               </div>
               <div className="muzzle"></div>
+              <div className="tongue"></div>
             </div>
           </div>
         </section>
