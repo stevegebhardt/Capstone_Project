@@ -35,6 +35,9 @@
   width: 192px;
 }
 
+/* ######################## */
+/* #########ears########### */
+
 .ear {
   position: absolute;
   top: -20%;
@@ -66,6 +69,7 @@
 .left-ear::before,
 .left-ear::after {
   right: 10%;
+  z-index: 1;
 }
 
 .left-ear::after {
@@ -81,11 +85,55 @@
 .right-ear::before,
 .right-ear::after {
   left: 10%;
+  z-index: 1;
 }
 
 .right-ear::after {
   transform: rotate(45deg);
 }
+
+.left-ear-inner {
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  height: 40%;
+  width: 45%;
+  background: var(--clr-blk);
+  border-radius: 70% 30% 0% 0% / 100% 100% 0% 0%;
+  transform: rotate(2deg);
+}
+.right-ear-inner {
+  position: absolute;
+  top: 18%;
+  left: 35%;
+  height: 40%;
+  width: 45%;
+  background: var(--clr-blk);
+  border-radius: 30% 70% 0% 0% / 100% 100% 0% 0%;
+  transform: rotate(-2deg);
+}
+
+.left-orb {
+  position: absolute;
+  height: 30px;
+  width: 35px;
+  top: 69%;
+  left: 2%;
+  background: var(--clr-white);
+  border-radius: 50%;
+}
+.right-orb {
+  position: absolute;
+  height: 30px;
+  width: 35px;
+  top: 69%;
+  right: 2%;
+  background: var(--clr-white);
+  border-radius: 50%;
+}
+
+/* ############################# */
+/* ############face############# */
 
 .face {
   position: absolute;
@@ -227,7 +275,9 @@
   background: var(--clr-white);
   animation: lick 3s infinite ease-out;
 }
-
+.tongue:hover {
+  animation-play-state: paused;
+}
 .tongue::after {
   content: "";
   position: absolute;
@@ -258,7 +308,7 @@
 .factsSection {
   display: flex;
   height: 60%;
-  background: var(--clr-neutral);
+  background: var(--clr-eggshell);
   align-items: center;
   justify-content: center;
   perspective: 1200px;
@@ -271,6 +321,27 @@
   left: -75px;
   cursor: grab;
   backface-visibility: visible;
+}
+.bar1,
+.bar2 {
+  position: absolute;
+  box-sizing: inherit;
+  height: 12px;
+  width: 90px;
+  right: 55px;
+  z-index: 1;
+  background: var(--clr-primary);
+  border-radius: 20px;
+  outline: 1px solid var(--clr-neutral);
+}
+.bar1 {
+  top: 120px;
+}
+.bar2 {
+  top: 156px;
+}
+.back {
+  box-shadow: 7px 10px 5px var(--clr-blk);
 }
 
 .front,
@@ -294,8 +365,8 @@
   top: 0;
   left: 0;
   transform-origin: left center;
-  transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
-  border-radius: 2% 5% 5% 2%;
+  transition: transform 1.25s ease-in-out;
+  border-radius: 2% 10% 10% 2%;
   border: 1px solid var(--clr-blk-transparent);
 }
 
@@ -369,35 +440,31 @@
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page7 {
-  transform: rotateY(-55deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
-}
-.book:hover .page8 {
-  transform: rotateY(-50deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
-}
-.book:hover .page9 {
   transform: rotateY(-45deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
-.book:hover .page10 {
+.book:hover .page8 {
   transform: rotateY(-40deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
-.book:hover .page11 {
+.book:hover .page9 {
   transform: rotateY(-35deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
+.book:hover .page10 {
+  transform: rotateY(-32deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page11 {
+  transform: rotateY(-28deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
 .book:hover .page12 {
-  transform: rotateY(-30deg) scale(1.1);
+  transform: rotateY(-25deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .back {
   transform: rotateY(-20deg) scale(1.1);
-}
-
-.front {
-  display: flex;
 }
 
 .bookTitle {
@@ -405,7 +472,7 @@
   position: absolute;
   top: 40px;
   left: 38px;
-  text-shadow: 1px 1px 2px var(--clr-blk);
+  text-shadow: 2px 2px 4px var(--clr-blk);
 }
 
 .getFact,
@@ -413,9 +480,10 @@
   font-size: medium;
   font-family: var(--font-primary);
   text-shadow: 1px 1px 2px var(--clr-blk);
-  border-radius: 3px;
+  border-radius: 5%;
 }
-.getFact:hover {
+.getFact:hover,
+.newFact:hover {
   cursor: pointer;
 }
 
@@ -428,6 +496,21 @@
   font-family: var(--font-primary);
   overflow-y: scroll;
   width: 90%;
+}
+
+/* ############################## */
+/* #########Scrollbar############ */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--clr-eggshell);
+  border-radius: 20%;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary);
+  border-radius: 20%;
 }
 
 .footer {

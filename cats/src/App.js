@@ -26,8 +26,16 @@ function App() {
       <div className="mainBody">
         <section className="catFace">
           <div className="cat">
-            <div className="ear left-ear"></div>
-            <div className="ear right-ear"></div>
+            <div className="ear left-ear">
+              <div className="left-ear-inner">
+                <div className="left-orb"></div>
+              </div>
+            </div>
+            <div className="ear right-ear">
+              <div className="right-ear-inner">
+                <div className="right-orb"></div>
+              </div>
+            </div>
             <div className="face">
               <div className="eye left-eye">
                 <div className="pupil"></div>
@@ -71,6 +79,8 @@ function App() {
               <div className="bookTitle">
                 The Truth About Cats, or So You Thought
               </div>
+              <div className="bar1"></div>
+              <div className="bar2"></div>
             </div>
           </div>
         </section>
