@@ -40,10 +40,15 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="facts">
+        <section className="factsSection">
           <div className="book">
             <div className="back"></div>
-            <div className="page6">
+            <div className="page12"></div>
+            <div className="page11"></div>
+            <div className="page10"></div>
+            <div className="page9"></div>
+            <div className="page8"></div>
+            <div className="page7">
               <div>
                 <button className="getFact" onClick={toggle}>
                   Want to Learn More?
@@ -56,6 +61,7 @@ function App() {
                 </button>
               </div>
             </div>
+            <div className="page6"></div>
             <div className="page5"></div>
             <div className="page4"></div>
             <div className="page3"></div>

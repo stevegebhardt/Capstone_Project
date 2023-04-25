@@ -5,14 +5,21 @@
   --clr-secondary: #b80c09;
   --clr-neutral: #6b6d76;
   --clr-blk: #141111;
+  --clr-blk-transparent: #00000072;
   --clr-white: #fff;
-  --clr-mop: #e1e1e1;
-  --clr-eggshell: #c9c9c9;
+  --clr-alabaster: #ececec;
+  --clr-motherofpearl: #dcdcdc;
+  --clr-ivory: #d1d1d1;
+  --clr-eggshell: #c2c2c2;
 }
 
 .mainBody {
   height: 100vh;
 }
+
+/* ######################################## */
+/* ######################################## */
+/* #############Cat-A-Mation############### */
 
 .catFace {
   height: 30%;
@@ -244,7 +251,11 @@
   }
 }
 
-.facts {
+/* ######################################## */
+/* ######################################## */
+/* ############Book-A-Mation############### */
+
+.factsSection {
   display: flex;
   height: 60%;
   background: var(--clr-neutral);
@@ -269,7 +280,13 @@
 .page3,
 .page4,
 .page5,
-.page6 {
+.page6,
+.page7,
+.page8,
+.page9,
+.page10,
+.page11,
+.page12 {
   transform-style: preserve-3d;
   position: absolute;
   width: 200px;
@@ -278,13 +295,11 @@
   left: 0;
   transform-origin: left center;
   transition: transform 0.5s ease-in-out, box-shadow 0.35s ease-in-out;
-  border-bottom-right-radius: 5%;
-  border-top-right-radius: 5%;
-  border-bottom-left-radius: 2%;
-  border-top-left-radius: 2%;
+  border-radius: 2% 5% 5% 2%;
+  border: 1px solid var(--clr-blk-transparent);
 }
 
-.page6 {
+.page7 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,17 +312,27 @@
 }
 
 .page1,
-.page2 {
+.page2,
+.page12,
+.page11 {
   background: var(--clr-eggshell);
 }
 
 .page3,
-.page4 {
-  background: var(--clr-mop);
+.page10 {
+  background: var(--clr-ivory);
+}
+.page4,
+.page9 {
+  background: var(--clr-motherofpearl);
+}
+.page5,
+.page8 {
+  background: var(--clr-alabaster);
 }
 
-.page5,
-.page6 {
+.page6,
+.page7 {
   background: var(--clr-white);
 }
 
@@ -320,27 +345,51 @@
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page1 {
-  transform: rotateY(-150deg) scale(1.1);
+  transform: rotateY(-155deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page2 {
-  transform: rotateY(-30deg) scale(1.1);
+  transform: rotateY(-150deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page3 {
-  transform: rotateY(-140deg) scale(1.1);
+  transform: rotateY(-145deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page4 {
-  transform: rotateY(-40deg) scale(1.1);
+  transform: rotateY(-140deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page5 {
-  transform: rotateY(-130deg) scale(1.1);
+  transform: rotateY(-135deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page6 {
+  transform: rotateY(-130deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page7 {
+  transform: rotateY(-55deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page8 {
   transform: rotateY(-50deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page9 {
+  transform: rotateY(-45deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page10 {
+  transform: rotateY(-40deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page11 {
+  transform: rotateY(-35deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 #00000002;
+}
+.book:hover .page12 {
+  transform: rotateY(-30deg) scale(1.1);
   box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .back {
@@ -370,8 +419,15 @@
   cursor: pointer;
 }
 
+.newFact {
+  width: 90%;
+  border-radius: 2%;
+}
+
 .fact {
   font-family: var(--font-primary);
+  overflow-y: scroll;
+  width: 90%;
 }
 
 .footer {
