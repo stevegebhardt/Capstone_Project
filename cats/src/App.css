@@ -214,21 +214,19 @@
 }
 
 @keyframes look {
-  0% {
+  0%,
+  50%,
+  95%,
+  100% {
     transform: translate(0);
   }
   10%,
   20% {
-    transform: translate(100%, 15%);
+    transform: translate(50%, 20%);
   }
   25%,
   40% {
-    transform: translate(-100%, 12%);
-  }
-  50%,
-  95%,
-  100% {
-    transform: translate(0, 0);
+    transform: translate(-75%, 18%);
   }
 }
 
@@ -317,10 +315,11 @@
 .book {
   transform-style: preserve-3d;
   position: relative;
-  height: 40%;
-  left: -75px;
   cursor: grab;
   backface-visibility: visible;
+  transform: rotateX(27.5deg);
+  height: 375px;
+  width: 300px;
 }
 .bar1,
 .bar2 {
@@ -328,20 +327,59 @@
   box-sizing: inherit;
   height: 12px;
   width: 90px;
-  right: 55px;
+  right: 100px;
   z-index: 1;
   background: var(--clr-primary);
   border-radius: 20px;
   outline: 1px solid var(--clr-neutral);
 }
 .bar1 {
-  top: 120px;
+  top: 180px;
 }
 .bar2 {
-  top: 156px;
+  top: 210px;
 }
 .back {
   box-shadow: 7px 10px 5px var(--clr-blk);
+}
+
+.pages {
+  transform-style: preserve-3d;
+  position: absolute;
+  height: 14%;
+  width: 97%;
+  bottom: 1%;
+  left: 3%;
+  border-radius: 32px 4px 32px 32px;
+  background-color: var(--clr-alabaster);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 6px,
+    var(--clr-ivory) 8px,
+    transparent 8px,
+    transparent 12px,
+    var(--clr-ivory) 12px,
+    transparent 14px,
+    transparent 18px,
+    var(--clr-ivory) 18px,
+    transparent 20px,
+    transparent 24px,
+    var(--clr-ivory) 24px,
+    transparent 26px,
+    transparent 30px,
+    var(--clr-ivory) 30px,
+    transparent 32px,
+    transparent 36px,
+    var(--clr-ivory) 36px,
+    transparent 38px,
+    transparent 42px,
+    var(--clr-ivory) 42px,
+    transparent 44px,
+    transparent 48px,
+    var(--clr-ivory) 48px,
+    transparent 50px
+  );
+  z-index: 1;
 }
 
 .front,
@@ -360,17 +398,18 @@
 .page12 {
   transform-style: preserve-3d;
   position: absolute;
-  width: 200px;
+  width: 100%;
   height: 100%;
   top: 0;
-  left: 0;
+  left: 47%;
   transform-origin: left center;
   transition: transform 1.25s ease-in-out;
-  border-radius: 2% 10% 10% 2%;
+  border-radius: 8% 10% 10% 32px;
   border: 1px solid var(--clr-blk-transparent);
 }
 
-.page7 {
+.page7,
+.page6 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -407,71 +446,77 @@
   background: var(--clr-white);
 }
 
+.page-container {
+  width: 90%;
+}
+
 .book:hover {
   left: 0;
 }
+.left-page {
+  transform: scaleX(-1);
+}
+.breeds {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.names {
+  font-size: smaller;
+  line-height: 0.1;
+}
 
+/* ############################ */
+/* ####book opening effects#### */
 .book:hover .front {
   transform: rotateY(-160deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page1 {
   transform: rotateY(-155deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page2 {
   transform: rotateY(-150deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page3 {
   transform: rotateY(-145deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page4 {
   transform: rotateY(-140deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page5 {
   transform: rotateY(-135deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page6 {
   transform: rotateY(-130deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page7 {
   transform: rotateY(-45deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page8 {
   transform: rotateY(-40deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page9 {
   transform: rotateY(-35deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page10 {
   transform: rotateY(-32deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page11 {
   transform: rotateY(-28deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .page12 {
   transform: rotateY(-25deg) scale(1.1);
-  box-shadow: 0 1em 3em 0 #00000002;
 }
 .book:hover .back {
   transform: rotateY(-20deg) scale(1.1);
 }
 
 .bookTitle {
-  width: 60%;
+  width: 40%;
   position: absolute;
   top: 40px;
-  left: 38px;
+  left: 36%;
+  font-size: larger;
   text-shadow: 2px 2px 4px var(--clr-blk);
 }
 
@@ -489,7 +534,7 @@
 
 .newFact {
   width: 90%;
-  border-radius: 2%;
+  border-radius: 5%;
 }
 
 .fact {

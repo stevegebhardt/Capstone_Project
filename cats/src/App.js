@@ -4,6 +4,7 @@ import axios from "axios";
 
 function App() {
   const [catFact, setCatFact] = useState([]);
+  const [catBreed, setCatBreed] = useState([]);
   const [showFact, setShowFact] = useState(true);
 
   const getCatFact = () => {
@@ -12,9 +13,16 @@ function App() {
       setCatFact(response.data.fact);
     });
   };
+  const getCatBreed = () => {
+    axios.get("https://catfact.ninja/breeds?limit=10").then((response) => {
+      console.log(response);
+      setCatBreed(response.data.data);
+    });
+  };
 
   useEffect(() => {
     getCatFact();
+    getCatBreed();
   }, []);
 
   const toggle = () => {
@@ -69,7 +77,17 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className="page6"></div>
+            <div className="page6">
+              <div className="page-container">
+                <p className="left-page">Here are some different cat breeds:</p>
+                <div className="breeds">
+                  {catBreed.map((breed) => {
+                    console.log(breed);
+                    return <p className="left-page names">{breed.breed}</p>;
+                  })}
+                </div>
+              </div>
+            </div>
             <div className="page5"></div>
             <div className="page4"></div>
             <div className="page3"></div>
@@ -81,6 +99,7 @@ function App() {
               </div>
               <div className="bar1"></div>
               <div className="bar2"></div>
+              <div className="pages"></div>
             </div>
           </div>
         </section>
