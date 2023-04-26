@@ -226,7 +226,7 @@
   }
   25%,
   40% {
-    transform: translate(-75%, 18%);
+    transform: translate(-30%, 18%);
   }
 }
 
@@ -275,6 +275,7 @@
 }
 .tongue:hover {
   animation-play-state: paused;
+  cursor: grabbing;
 }
 .tongue::after {
   content: "";
@@ -309,7 +310,7 @@
   background: var(--clr-eggshell);
   align-items: center;
   justify-content: center;
-  perspective: 1200px;
+  perspective: 46rem;
 }
 
 .book {
@@ -340,17 +341,16 @@
   top: 210px;
 }
 .back {
-  box-shadow: 7px 10px 5px var(--clr-blk);
+  box-shadow: -10px 10px 5px var(--clr-blk);
 }
 
 .pages {
-  transform-style: preserve-3d;
   position: absolute;
   height: 14%;
   width: 97%;
   bottom: 1%;
   left: 3%;
-  border-radius: 32px 4px 32px 32px;
+  border-radius: 32px 4px 46px 32px;
   background-color: var(--clr-alabaster);
   background-image: linear-gradient(
     to bottom,
@@ -404,7 +404,7 @@
   left: 47%;
   transform-origin: left center;
   transition: transform 1.25s ease-in-out;
-  border-radius: 8% 10% 10% 32px;
+  border-radius: 8% 10% 41px 32px;
   border: 1px solid var(--clr-blk-transparent);
 }
 
@@ -512,11 +512,11 @@
 }
 
 .bookTitle {
-  width: 40%;
+  width: 60%;
   position: absolute;
-  top: 40px;
-  left: 36%;
-  font-size: larger;
+  top: 48px;
+  left: 25%;
+  font-size: 25px;
   text-shadow: 2px 2px 4px var(--clr-blk);
 }
 
@@ -533,14 +533,15 @@
 }
 
 .newFact {
-  width: 90%;
-  border-radius: 5%;
+  position: absolute;
+  width: 75%;
+  left: 15%;
+  bottom: 5%;
 }
 
 .fact {
   font-family: var(--font-primary);
-  overflow-y: scroll;
-  width: 90%;
+  width: 80%;
 }
 
 /* ############################## */

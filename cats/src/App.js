@@ -14,7 +14,7 @@ function App() {
     });
   };
   const getCatBreed = () => {
-    axios.get("https://catfact.ninja/breeds?limit=10").then((response) => {
+    axios.get("https://catfact.ninja/breeds?limit=11").then((response) => {
       console.log(response);
       setCatBreed(response.data.data);
     });
