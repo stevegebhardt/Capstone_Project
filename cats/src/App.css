@@ -379,7 +379,6 @@
     var(--clr-ivory) 48px,
     transparent 50px
   );
-  z-index: 1;
 }
 
 .front,
@@ -397,12 +396,12 @@
 .page11,
 .page12 {
   transform-style: preserve-3d;
+  transform-origin: left center;
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   left: 47%;
-  transform-origin: left center;
   transition: transform 1.25s ease-in-out;
   border-radius: 8% 10% 41px 32px;
   border: 1px solid var(--clr-blk-transparent);
@@ -462,8 +461,10 @@
   align-items: center;
 }
 .names {
-  font-size: smaller;
+  font-size: 0.825rem;
   line-height: 0.1;
+  font-weight: 600;
+  font-family: var(--font-secondary);
 }
 
 /* ############################ */
@@ -525,7 +526,7 @@
   font-size: medium;
   font-family: var(--font-primary);
   text-shadow: 1px 1px 2px var(--clr-blk);
-  border-radius: 5%;
+  border-radius: 3px;
 }
 .getFact:hover,
 .newFact:hover {
@@ -533,30 +534,12 @@
 }
 
 .newFact {
-  position: absolute;
-  width: 75%;
-  left: 15%;
-  bottom: 5%;
+  width: 80%;
 }
 
 .fact {
   font-family: var(--font-primary);
   width: 80%;
-}
-
-/* ############################## */
-/* #########Scrollbar############ */
-
-::-webkit-scrollbar {
-  width: 4px;
-}
-::-webkit-scrollbar-track {
-  background-color: var(--clr-eggshell);
-  border-radius: 20%;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--clr-primary);
-  border-radius: 20%;
 }
 
 .footer {
