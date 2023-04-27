@@ -56,6 +56,36 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="middleSection">
+          <div className="middleDiv">
+            <p>
+              Usually we say "Cats' got your tongue?". Are you quick enough to
+              catch this cats' tongue?
+            </p>
+          </div>
+        </section>
+        <section className="middleSection">
+          <div className="middleDiv">
+            <p>
+              Most cats love to play with balls of yarn...or anything for that
+              matter.
+            </p>
+          </div>
+          <div className="middleDiv">
+            <img src="" className=""></img>
+          </div>
+        </section>
+        <section className="middleSection">
+          <div className="middleDiv">
+            <img src="ball-of-yarn.jpeg" className="yarn"></img>
+          </div>
+          <div className="middleDiv">
+            <p>
+              Most cats love to play with balls of yarn...or anything for that
+              matter.
+            </p>
+          </div>
+        </section>
         <section className="factsSection">
           <div className="book">
             <div className="back"></div>

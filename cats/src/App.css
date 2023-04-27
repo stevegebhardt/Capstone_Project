@@ -13,16 +13,13 @@
   --clr-eggshell: #c2c2c2;
 }
 
-.mainBody {
-  height: 100vh;
-}
-
 /* ######################################## */
 /* ######################################## */
 /* #############Cat-A-Mation############### */
 
 .catFace {
-  height: 30%;
+  height: 305px;
+  width: 100;
   background: var(--clr-blk);
   display: flex;
   align-items: center;
@@ -40,7 +37,7 @@
 
 .ear {
   position: absolute;
-  top: -20%;
+  top: -5%;
   height: 60%;
   width: 25%;
   background: var(--clr-white);
@@ -139,13 +136,14 @@
   position: absolute;
   height: 100%;
   width: 100%;
+  top: 15%;
   background: var(--clr-blk);
   border-radius: 50%;
 }
 
 .eye {
   position: absolute;
-  top: 43%;
+  top: 34%;
   height: 30%;
   width: 30%;
   background: var(--clr-white);
@@ -188,11 +186,11 @@
 }
 
 .left-eye {
-  left: 13px;
+  left: 20px;
 }
 
 .right-eye {
-  right: 13px;
+  right: 20px;
 }
 
 .left-eye::before {
@@ -243,7 +241,7 @@
 
 .muzzle {
   position: absolute;
-  top: 70%;
+  bottom: 32%;
   left: 50%;
   height: 6%;
   width: 10%;
@@ -271,7 +269,7 @@
   left: 86px;
   border-radius: 10% 10% 50% 50%;
   background: var(--clr-white);
-  animation: lick 3s infinite ease-out;
+  animation: lick 2s infinite ease-out;
 }
 .tongue:hover {
   animation-play-state: paused;
@@ -302,11 +300,97 @@
 
 /* ######################################## */
 /* ######################################## */
+/* ############Middle Sections############## */
+
+.middleSection {
+  height: 650px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+section:nth-child(1) {
+  background: var(--clr-blk);
+}
+section:nth-child(2) {
+  background: var(--clr-white);
+  height: 300px;
+  display: flex;
+  justify-content: center;
+}
+section:nth-child(3) {
+  background: var(--clr-alabaster);
+}
+section:nth-child(4) {
+  background: var(--clr-white);
+}
+
+section p {
+  width: 80%;
+}
+
+.yarn {
+  position: relative;
+  left: 25%;
+  bottom: 20%;
+  margin: 0;
+  padding: 0;
+  size: 40px;
+  animation: bounce 4s ease-in-out infinite normal;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-200px);
+  }
+  9.2%,
+  27.6%,
+  46%,
+  64.4%,
+  82.8%,
+  100% {
+    transform: translateY(150px);
+  }
+  18.4% {
+    transform: translateY(-175px);
+  }
+  36.8% {
+    transform: translateY(-150px);
+  }
+  55.2% {
+    transform: translateY(-75px);
+  }
+  73.6% {
+    transform: translateY(-20px);
+  }
+  92% {
+    transform: translateY(0px);
+  }
+}
+.middleDiv {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.middleSection p {
+  font-size: 25px;
+  font-family: var(--font-primary);
+  text-shadow: 0 2px 2px var(--clr-neutral);
+}
+.small {
+  display: flex;
+  justify-content: center;
+}
+.gif {
+  width: 75%;
+  border-radius: 50%;
+}
+/* ######################################## */
+/* ######################################## */
 /* ############Book-A-Mation############### */
 
 .factsSection {
   display: flex;
-  height: 60%;
+  height: 600px;
   background: var(--clr-eggshell);
   align-items: center;
   justify-content: center;
@@ -379,6 +463,7 @@
     var(--clr-ivory) 48px,
     transparent 50px
   );
+  z-index: 1;
 }
 
 .front,
