@@ -3,6 +3,7 @@
   --font-secondary: "Caveat", cursive;
   --clr-primary: #ce8147;
   --clr-secondary: #b80c09;
+  --clr-tertiary: #7b0200;
   --clr-neutral: #6b6d76;
   --clr-blk: #141111;
   --clr-blk-transparent: #00000072;
@@ -436,6 +437,7 @@ section p {
   left: 3%;
   border-radius: 32px 4px 46px 32px;
   background-color: var(--clr-alabaster);
+  box-shadow: inset 5px 8px 0 0 var(--clr-eggshell);
   background-image: linear-gradient(
     to bottom,
     transparent 6px,
@@ -503,6 +505,12 @@ section p {
 .front,
 .back {
   background: var(--clr-secondary);
+  background-image: linear-gradient(
+    to right,
+    var(--clr-tertiary) 48px,
+    var(--clr-blk) 50px,
+    transparent 50px
+  );
 }
 
 .page1,

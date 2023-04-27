@@ -71,13 +71,15 @@ function App() {
               matter.
             </p>
           </div>
-          <div className="middleDiv">
-            <img src="" className=""></img>
-          </div>
+          <div className="middleDiv"></div>
         </section>
         <section className="middleSection">
           <div className="middleDiv">
-            <img src="ball-of-yarn.jpeg" className="yarn"></img>
+            <img
+              src="ball-of-yarn.jpeg"
+              className="yarn"
+              alt="Ball of Yarn"
+            ></img>
           </div>
           <div className="middleDiv">
             <p>
