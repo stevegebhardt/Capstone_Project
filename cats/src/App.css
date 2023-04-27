@@ -465,7 +465,6 @@ section p {
     var(--clr-ivory) 48px,
     transparent 50px
   );
-  z-index: 1;
 }
 
 .front,
@@ -563,46 +562,46 @@ section p {
 /* ############################ */
 /* ####book opening effects#### */
 .book:hover .front {
-  transform: rotateY(-160deg) scale(1.1);
+  transform: rotateY(-160deg) scale(1.1, 1.1);
 }
 .book:hover .page1 {
-  transform: rotateY(-155deg) scale(1.1);
+  transform: rotateY(-155deg) scale(1.1, 1.1);
 }
 .book:hover .page2 {
-  transform: rotateY(-150deg) scale(1.1);
+  transform: rotateY(-150deg) scale(1.1, 1.1);
 }
 .book:hover .page3 {
-  transform: rotateY(-145deg) scale(1.1);
+  transform: rotateY(-145deg) scale(1.1, 1.1);
 }
 .book:hover .page4 {
-  transform: rotateY(-140deg) scale(1.1);
+  transform: rotateY(-140deg) scale(1.1, 1.1);
 }
 .book:hover .page5 {
-  transform: rotateY(-135deg) scale(1.1);
+  transform: rotateY(-135deg) scale(1.1, 1.1);
 }
 .book:hover .page6 {
-  transform: rotateY(-130deg) scale(1.1);
+  transform: rotateY(-130deg) scale(1.1, 1.1);
 }
 .book:hover .page7 {
-  transform: rotateY(-45deg) scale(1.1);
+  transform: rotateY(-45deg) scale(1.1, 1.1);
 }
 .book:hover .page8 {
-  transform: rotateY(-40deg) scale(1.1);
+  transform: rotateY(-40deg) scale(1.1, 1.1);
 }
 .book:hover .page9 {
-  transform: rotateY(-35deg) scale(1.1);
+  transform: rotateY(-35deg) scale(1.1, 1.1);
 }
 .book:hover .page10 {
-  transform: rotateY(-32deg) scale(1.1);
+  transform: rotateY(-32deg) scale(1.1, 1.1);
 }
 .book:hover .page11 {
-  transform: rotateY(-28deg) scale(1.1);
+  transform: rotateY(-28deg) scale(1.1, 1.1);
 }
 .book:hover .page12 {
-  transform: rotateY(-25deg) scale(1.1);
+  transform: rotateY(-25deg) scale(1.1, 1.1);
 }
 .book:hover .back {
-  transform: rotateY(-20deg) scale(1.1);
+  transform: rotateY(-20deg) scale(1.1, 1.1);
 }
 
 .bookTitle {
