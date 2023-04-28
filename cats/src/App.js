@@ -89,16 +89,18 @@ function App() {
             <div className="page9"></div>
             <div className="page8"></div>
             <div className="page7">
-              <div>
-                <button className="getFact" onClick={toggle}>
-                  Want to Learn More?
-                </button>
-              </div>
-              <div className="fact">{showFact ? null : <p>{catFact}</p>}</div>
-              <div>
-                <button className="newFact" onClick={getCatFact}>
-                  How About Something Different?
-                </button>
+              <div className="bob">
+                <div>
+                  <button className="getFact" onClick={toggle}>
+                    Want to Learn More?
+                  </button>
+                </div>
+                <div className="fact">{showFact ? null : <p>{catFact}</p>}</div>
+                <div>
+                  <button className="newFact" onClick={getCatFact}>
+                    How About Something Different?
+                  </button>
+                </div>
               </div>
             </div>
             <div className="page6">

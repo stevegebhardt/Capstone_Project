@@ -316,10 +316,12 @@ section:nth-child(1) {
   background: var(--clr-blk);
 }
 section:nth-child(2) {
-  background: var(--clr-alabaster);
-  height: 300px;
+  background: var(--clr-blk);
+  height: 250px;
+  color: var(--clr-alabaster);
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 section:nth-child(3) {
   background: var(--clr-white);
@@ -340,30 +342,40 @@ section:nth-child(3) {
 }
 @keyframes bounce {
   0% {
-    transform: translateY(-200px);
+    transform: translate(0, -200px);
   }
-  9.2%,
-  27.6%,
-  46%,
-  64.4%,
-  82.8%,
-  100% {
-    transform: translateY(150px);
+  9.2% {
+    transform: translate(0, 150px);
   }
   18.4% {
-    transform: translateY(-175px);
+    transform: translateX(-10%) translateY(-175px);
+  }
+  27.6% {
+    transform: translateX(-19%) translateY(150px);
   }
   36.8% {
-    transform: translateY(-150px);
+    transform: translateX(-30%) translateY(-150px);
+  }
+  46% {
+    transform: translateX(-50%) translateY(150px);
   }
   55.2% {
-    transform: translateY(-75px);
+    transform: translateX(-75%) translateY(-75px);
+  }
+  64.4% {
+    transform: translateX(-90%) translateY(150px);
   }
   73.6% {
-    transform: translateY(-20px);
+    transform: translateX(-100%) translateY(-20px);
+  }
+  82.8% {
+    transform: translateX(-125%) translateY(150px);
   }
   92% {
-    transform: translateY(0px);
+    transform: translateX(-150%) translateY(0px);
+  }
+  100% {
+    transform: translateX(-170%) translateY(150px);
   }
 }
 .middleDiv {
@@ -441,7 +453,7 @@ section:nth-child(3) {
   left: 3%;
   border-left: 3px solid var(--clr-blk);
   border-top: 3px solid var(--clr-blk);
-  border-radius: 32px 4px 46px 32px;
+  border-radius: 18px 6px 16px 18px;
   background-color: var(--clr-alabaster);
   box-shadow: inset 5px 8px 0 0 var(--clr-eggshell);
   background-image: linear-gradient(
@@ -494,7 +506,7 @@ section:nth-child(3) {
   height: 100%;
   top: 0;
   transition: transform 1.25s ease-in-out;
-  border-radius: 8% 10% 13% 32px;
+  border-radius: 6% 7%;
   border: 1px solid var(--clr-blk-transparent);
 }
 
@@ -543,6 +555,15 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.bob {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 80%;
+  margin-top: 15%;
+  align-items: center;
+  text-align: center;
 }
 
 .left-page {
