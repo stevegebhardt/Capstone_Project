@@ -9,13 +9,13 @@ function App() {
 
   const getCatFact = () => {
     axios.get("https://catfact.ninja/fact").then((response) => {
-      console.log(response);
+      // console.log(response);
       setCatFact(response.data.fact);
     });
   };
   const getCatBreed = () => {
     axios.get("https://catfact.ninja/breeds?limit=11").then((response) => {
-      console.log(response);
+      // console.log(response);
       setCatBreed(response.data.data);
     });
   };
@@ -58,21 +58,13 @@ function App() {
         </section>
         <section className="middleSection">
           <div className="middleDiv">
-            <p>
+            <p className="middleParagraph">
               Usually we say "Cats' got your tongue?". Are you quick enough to
               catch this cats' tongue?
             </p>
           </div>
         </section>
-        <section className="middleSection">
-          <div className="middleDiv">
-            <p>
-              Most cats love to play with balls of yarn...or anything for that
-              matter.
-            </p>
-          </div>
-          <div className="middleDiv"></div>
-        </section>
+
         <section className="middleSection">
           <div className="middleDiv">
             <img
@@ -82,7 +74,7 @@ function App() {
             ></img>
           </div>
           <div className="middleDiv">
-            <p>
+            <p className="middleParagraph">
               Most cats love to play with balls of yarn...or anything for that
               matter.
             </p>
@@ -114,7 +106,6 @@ function App() {
                 <p className="left-page">Here are some different cat breeds:</p>
                 <div className="breeds">
                   {catBreed.map((breed) => {
-                    console.log(breed);
                     return <p className="left-page names">{breed.breed}</p>;
                   })}
                 </div>
